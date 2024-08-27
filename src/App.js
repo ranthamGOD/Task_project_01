@@ -12,7 +12,6 @@ const Loader = () => (
   </div>
 );
 
-
 const App = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
