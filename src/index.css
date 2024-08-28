@@ -10,3 +10,11 @@ body {
 .bg_color {
   background: linear-gradient(to right, #92aed7, #c1c3c5);
 }
+
+.card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -7,6 +7,8 @@ module.exports = {
       colors: {
         darkBlack: "#0a0a0a",
         lightBlack: "#333333",
+        lightGray: "#b8bfc1",
+        lightGreen: "#67e687",
       },
       fontFamily: {
         inter: ['"Inter"'],
@@ -16,6 +18,11 @@ module.exports = {
         '104': '1.04',
         // Add more custom scale values if needed
       },
+      // screens: {
+      //   'sm': '240px',
+      //   'md': '778px',
+      //   // ... other breakpoints
+      // },
     },
   },
   plugins: [],
