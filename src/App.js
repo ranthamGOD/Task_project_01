@@ -20,7 +20,7 @@ const App = () => {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(true);
   const [itemsPerPage] = useState(10);
-  const [searchQuery, setSearchQuery] = useState('');
+  // const [searchQuery, setSearchQuery] = useState('');
 
   // Api handling
   useEffect(() => {
@@ -47,7 +47,7 @@ const App = () => {
 
   // Filter products based on search query
   const handleSearch = (query) => {
-    setSearchQuery(query);
+    // setSearchQuery(query);
     setCurrentPage(1); // Reset to first page on search
 
     if (query) {
