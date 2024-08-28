@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const SearchBar = ({ onSearch }) => {
-  // const [query, setQuery] = useState('');
 
   const handleChange = (e) => {
     // setQuery(e.target.value);

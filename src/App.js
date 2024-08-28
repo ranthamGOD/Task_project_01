@@ -42,7 +42,7 @@ const App = () => {
     };
 
     fetchItems();
-  }, [currentPage]);
+  }, [currentPage, searchQuery]);
 
 
   // Filter products based on search query
