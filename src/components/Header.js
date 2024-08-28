@@ -17,7 +17,7 @@ const Header = () => {
 
         {/* Hamburger Icon */}
         <div className="lg:hidden">
-          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-gray-700 text-2xl">
+          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-gray-700 text-3xl px-3">
             ☰
           </button>
         </div>
@@ -44,7 +44,7 @@ const Header = () => {
       {/* Sidebar for smaller screens (Visible from medium screens) */}
       <div className={`fixed top-0 right-0 h-full bg-white shadow-md z-20 transition-transform transform ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden w-2/4 md:w-1/4`}>
         <div className="flex flex-col items-start p-4 space-y-4">
-          <button onClick={() => setSidebarOpen(false)} className="self-end text-gray-700">✖</button>
+          <button onClick={() => setSidebarOpen(false)} className="self-end text-gray-700 text-3xl px-3">✖</button>
           <ul className="space-y-4">
             <li><a href="#" className="text-lightBlack hover:text-purple-600">Features</a></li>
             <li><a href="#" className="text-lightBlack hover:text-purple-600">Marketplace</a></li>
