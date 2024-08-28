@@ -20,7 +20,6 @@ const App = () => {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(true);
   const [itemsPerPage] = useState(10);
-  // const [searchQuery, setSearchQuery] = useState('');
 
   // Api handling
   useEffect(() => {
@@ -62,8 +61,6 @@ const App = () => {
     }
   };
 
-  // console.log("filteredProducts", filteredProducts)
-  // console.log("products", products)
 
   const indexOfLastProduct = currentPage * productsPerPage;
   // console.log("indexOfLastProduct", indexOfLastProduct)
@@ -73,7 +70,7 @@ const App = () => {
   // console.log("currentProducts", currentProducts)
 
   return (
-    <div className="bg-gray-100 min-h-screen p-5">
+    <div className="bg-gray-100 min-h-screen p-5 bg_color">
       <Header />
       {loading && <Loader />} {/* Show loader while loading */}
       {error && <div className="text-red-500">Error: {error}</div>} {/* Display error message */}

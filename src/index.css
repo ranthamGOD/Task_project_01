@@ -4,4 +4,9 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  /* background: linear-gradient(to right, #92aed7, #c1c3c5); */
+}
+
+.bg_color {
+  background: linear-gradient(to right, #92aed7, #c1c3c5);
 }
