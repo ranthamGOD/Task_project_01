@@ -225,7 +225,7 @@ const App = () => {
 
   useEffect(() => {
     setFilteredProducts(collections)
-  }, [])
+  }, [collections])
 
   // Filter products based on search query
   const handleSearch = (query) => {

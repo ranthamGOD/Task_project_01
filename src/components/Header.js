@@ -25,16 +25,16 @@ const Header = () => {
         {/* Navigation and Buttons (Hidden on medium screens) */}
         <nav className="hidden lg:flex space-x-6 text-lightBlack">
           <ul className="flex space-x-6">
-            <li><a href="#" className="hover:text-purple-600">Features</a></li>
-            <li><a href="#" className="hover:text-purple-600">Marketplace</a></li>
-            <li><a href="#" className="hover:text-purple-600">Company</a></li>
-            <li><a href="#" className="hover:text-purple-600">Team</a></li>
-            <li><a href="#" className="hover:text-purple-600">Contact</a></li>
+            <li><a href="https://www.shopdigest.com/" className="hover:text-purple-600">Features</a></li>
+            <li><a href="https://www.shopdigest.com/" className="hover:text-purple-600">Marketplace</a></li>
+            <li><a href="https://www.shopdigest.com/" className="hover:text-purple-600">Company</a></li>
+            <li><a href="https://www.shopdigest.com/" className="hover:text-purple-600">Team</a></li>
+            <li><a href="https://www.shopdigest.com/" className="hover:text-purple-600">Contact</a></li>
           </ul>
         </nav>
         {/* Navigation and Buttons (Hidden on medium screens) */}
         <div className="hidden lg:flex space-x-4">
-          <button class="border border-purple-600 text-purple-600 hover:bg-purple-100 px-4 py-2 rounded-lg">
+          <button className="border border-purple-600 text-purple-600 hover:bg-purple-100 px-4 py-2 rounded-lg">
             Login
           </button>
           <button className="bg-purple-600 text-white px-4 py-2 rounded-lg">Add Post &nbsp; <FaArrowRightLong className='display: inline mb-1' /></button>
@@ -46,11 +46,11 @@ const Header = () => {
         <div className="flex flex-col items-start p-4 space-y-4">
           <button onClick={() => setSidebarOpen(false)} className="self-end text-gray-700 text-3xl px-3">✖</button>
           <ul className="space-y-4">
-            <li><a href="#" className="text-lightBlack hover:text-purple-600">Features</a></li>
-            <li><a href="#" className="text-lightBlack hover:text-purple-600">Marketplace</a></li>
-            <li><a href="#" className="text-lightBlack hover:text-purple-600">Company</a></li>
-            <li><a href="#" className="text-lightBlack hover:text-purple-600">Team</a></li>
-            <li><a href="#" className="text-lightBlack hover:text-purple-600">Contact</a></li>
+            <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Features</a></li>
+            <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Marketplace</a></li>
+            <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Company</a></li>
+            <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Team</a></li>
+            <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Contact</a></li>
           </ul>
           <button className="text-darkBlack hover:text-purple-600">Login</button>
 
