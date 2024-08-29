@@ -32,7 +32,7 @@ const Header = () => {
             <li><a href="#" className="hover:text-purple-600">Contact</a></li>
           </ul>
         </nav>
-
+        {/* Navigation and Buttons (Hidden on medium screens) */}
         <div className="hidden lg:flex space-x-4">
           <button class="border border-purple-600 text-purple-600 hover:bg-purple-100 px-4 py-2 rounded-lg">
             Login

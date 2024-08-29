@@ -14,13 +14,10 @@ const Loader = () => (
 );
 
 const App = () => {
-  const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(true);
   const [itemsPerPage] = useState(8);
-
+  const totalItems = filteredProducts.length;
 
 
   const collections = [
@@ -232,7 +229,6 @@ const App = () => {
 
   // Filter products based on search query
   const handleSearch = (query) => {
-    // setSearchQuery(query);
     setCurrentPage(1); // Reset to first page on search
 
     if (query) {
@@ -255,9 +251,8 @@ const App = () => {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-  console.log("currentPage Data: ", currentData)
+  // console.log("currentPage Data: ", currentData)
 
-  // Handle page change
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -276,7 +271,7 @@ const App = () => {
           <small className='text-sm text-lightBlack'>
             We use an agile approach to test assumptions and connect with the needs of your audience early and often.
           </small>
-          <a href='#' className='text-blue-500 hover:underline'>See all</a>
+          <a href='#' className='text-blue-500 hover:underline  hidden md:inline'>See all</a>
         </div>
         {
           filteredProducts.length === 0 ? (
@@ -295,6 +290,8 @@ const App = () => {
                 currentPage={currentPage}
                 totalPages={totalPages}
                 onPageChange={handlePageChange}
+                itemsPerPage={itemsPerPage}
+                totalItems={totalItems}
               />
             </>
           )

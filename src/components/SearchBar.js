@@ -3,8 +3,7 @@ import React from 'react';
 const SearchBar = ({ onSearch }) => {
 
   const handleChange = (e) => {
-    // setQuery(e.target.value);
-    onSearch(e.target.value); // Pass the query up to the parent component
+    onSearch(e.target.value);
   };
 
   return (
