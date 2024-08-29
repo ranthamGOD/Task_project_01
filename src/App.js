@@ -7,11 +7,11 @@ import { FaShopify, FaChartLine, FaMoneyCheckAlt } from 'react-icons/fa';
 
 
 // Loader Component
-const Loader = () => (
-  <div className="flex justify-center items-center min-h-screen">
-    <div className="w-16 h-16 border-4 border-t-4 border-blue-500 border-solid rounded-half animate-spin"></div>
-  </div>
-);
+// const Loader = () => (
+//   <div className="flex justify-center items-center min-h-screen">
+//     <div className="w-16 h-16 border-4 border-t-4 border-blue-500 border-solid rounded-half animate-spin"></div>
+//   </div>
+// );
 
 const App = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);

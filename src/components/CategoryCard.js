@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const CategoryCard = ({ collection }) => {
   const { title, description, appsCount, icons } = collection;
-  const [isExpanded, setIsExpanded] = useState(false);
-  const characterLimit = 40;
+  // const [isExpanded, setIsExpanded] = useState(false);
+  // const characterLimit = 40;
 
-  const toggleDescription = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const toggleDescription = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
 
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto transition-transform transform hover:scale-102 duration-300 ease-in-out flex flex-col justify-between">
