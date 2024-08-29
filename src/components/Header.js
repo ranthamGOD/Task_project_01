@@ -1,9 +1,34 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
-
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const offcanvasRef = useRef(null);
+
+  // logic to close the sidebar when clicking outside
+  const handleOutsideClick = (e) => {
+    if (offcanvasRef.current && !offcanvasRef.current.contains(e.target)) {
+      setSidebarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (sidebarOpen) {
+      // Delay the activation of the outside click listener to avoid immediate close
+      document.addEventListener('click', handleOutsideClick);
+    }
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [sidebarOpen]);
+
+  const toggleSidebar = (e) => {
+    // Prevent the sidebar from closing immediately when clicking the toggle button
+    e.stopPropagation();
+    setSidebarOpen(!sidebarOpen);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
@@ -19,7 +44,7 @@ const Header = () => {
 
         {/* Hamburger Icon */}
         <div className="lg:hidden">
-          <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-gray-700 text-3xl px-3">
+          <button onClick={toggleSidebar} className="text-gray-700 text-3xl px-3">
             ☰
           </button>
         </div>
@@ -44,9 +69,9 @@ const Header = () => {
       </div>
 
       {/* Sidebar for smaller screens (Visible from medium screens) */}
-      <div className={`fixed top-0 right-0 h-full bg-white shadow-md z-20 transition-transform transform ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden w-2/4 md:w-1/4`}>
+      <div ref={offcanvasRef} className={`fixed top-0 right-0 h-full bg-white shadow-md z-20 transition-transform transform ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden w-2/4 md:w-1/4`}>
         <div className="flex flex-col items-start p-4 space-y-4">
-          <button onClick={() => setSidebarOpen(false)} className="self-end text-gray-700 text-3xl px-3">✖</button>
+          <button onClick={toggleSidebar} className="self-end text-gray-700 text-3xl px-3">✖</button>
           <ul className="space-y-4">
             <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Features</a></li>
             <li><a href="https://www.shopdigest.com/" className="text-lightBlack hover:text-purple-600">Marketplace</a></li>

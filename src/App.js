@@ -223,8 +223,6 @@ const App = () => {
   const totalItems = filteredProducts.length;
 
 
-
-
   useEffect(() => {
     setFilteredProducts(collections)
   }, [])
