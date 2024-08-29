@@ -13,6 +13,209 @@ import { FaShopify, FaChartLine, FaMoneyCheckAlt } from 'react-icons/fa';
 //   </div>
 // );
 
+const collections = [
+  {
+    title: 'Works with Shopify POS',
+    description: 'The Works with Shopify POS feature enables you to streamline your workflow.',
+    appsCount: 104,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-green-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-purple-400 to-pink-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-red-500' },
+    ],
+  },
+  {
+    title: 'Useful apps for India',
+    description: 'The Useful apps for India feature enables you to streamline your workflow.',
+    appsCount: 18,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-blue-400 to-indigo-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-pink-400 to-orange-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-green-400 to-teal-500' },
+    ],
+  },
+  {
+    title: 'made-by-shopify',
+    description: 'The made-by-shopify feature enables you to streamline your workflow.',
+    appsCount: 17,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-purple-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-teal-400 to-green-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-orange-400 to-yellow-500' },
+    ],
+  },
+  {
+    title: 'Works with Shopify Marketing',
+    description: 'The Works with Shopify Marketing feature enables you to promote and streamline your products.',
+    appsCount: 7,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-indigo-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-pink-400 to-red-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-indigo-500' },
+    ],
+  },
+  {
+    title: 'Best POS Integrations',
+    description: 'Discover the best POS integrations to enhance your store operations.',
+    appsCount: 56,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-yellow-400 to-orange-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-blue-400 to-green-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-red-400 to-pink-500' },
+    ],
+  },
+  {
+    title: 'Shopify SEO Tools',
+    description: 'Improve your store’s visibility with these powerful SEO tools.',
+    appsCount: 34,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-teal-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-purple-400 to-yellow-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-orange-400 to-red-500' },
+    ],
+  },
+  {
+    title: 'Customer Retention',
+    description: 'Boost customer loyalty with these effective retention strategies.',
+    appsCount: 12,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-green-400 to-purple-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-blue-400 to-pink-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-indigo-500' },
+    ],
+  },
+  {
+    title: 'Shopify Analytics',
+    description: 'Get insights into your store’s performance with Shopify analytics tools.',
+    appsCount: 22,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-indigo-400 to-green-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-red-400 to-blue-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-purple-500' },
+    ],
+  },
+  {
+    title: 'Abandoned Cart Recovery',
+    description: 'Recover lost sales with abandoned cart recovery apps.',
+    appsCount: 9,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-teal-400 to-indigo-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-orange-400 to-pink-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-green-400 to-red-500' },
+    ],
+  },
+  {
+    title: 'Shopify Email Marketing',
+    description: 'Enhance your marketing strategy with Shopify email marketing apps.',
+    appsCount: 45,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-purple-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-yellow-400 to-pink-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-teal-400 to-indigo-500' },
+    ],
+  },
+  {
+    title: 'Payment Gateways',
+    description: 'Explore various payment gateway options for your Shopify store.',
+    appsCount: 67,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-orange-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-green-400 to-blue-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-pink-500' },
+    ],
+  },
+  {
+    title: 'Social Media Integrations',
+    description: 'Integrate social media platforms to boost your store’s engagement.',
+    appsCount: 33,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-blue-400 to-green-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-pink-400 to-yellow-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-indigo-400 to-red-500' },
+    ],
+  },
+  {
+    title: 'Shopify Plus Features',
+    description: 'Unlock advanced features with Shopify Plus.',
+    appsCount: 29,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-orange-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-green-400 to-red-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-yellow-500' },
+    ],
+  },
+  {
+    title: 'Store Design Apps',
+    description: 'Create a stunning storefront with these store design apps.',
+    appsCount: 21,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-teal-400 to-green-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-orange-400 to-purple-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-blue-500' },
+    ],
+  },
+  {
+    title: 'Shopify Multichannel',
+    description: 'Sell on multiple channels with Shopify multichannel integrations.',
+    appsCount: 14,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-purple-400 to-green-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-indigo-400 to-orange-500' },
+    ],
+  },
+  {
+    title: 'Dropshipping Apps',
+    description: 'Start your dropshipping business with these essential apps.',
+    appsCount: 78,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-blue-400 to-yellow-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-green-400 to-red-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-orange-400 to-purple-500' },
+    ],
+  },
+  {
+    title: 'Shopify Loyalty Programs',
+    description: 'Increase customer loyalty with Shopify loyalty program apps.',
+    appsCount: 8,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-pink-400 to-blue-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-yellow-400 to-green-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-red-500' },
+    ],
+  },
+  {
+    title: 'Inventory Management',
+    description: 'Manage your inventory effectively with these Shopify apps.',
+    appsCount: 19,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-green-400 to-orange-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-blue-400 to-purple-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-pink-500' },
+    ],
+  },
+  {
+    title: 'Shipping Solutions',
+    description: 'Optimize your shipping process with Shopify shipping solutions.',
+    appsCount: 25,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-indigo-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-teal-400 to-orange-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r fromblue-400 to-yellow-500' },
+    ],
+  },
+  {
+    title: 'Shopify Conversion Tools',
+    description: 'Boost your sales with conversion rate optimization tools.',
+    appsCount: 37,
+    icons: [
+      { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-purple-400 to-teal-500' },
+      { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-yellow-400 to-green-500' },
+      { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-red-400 to-blue-500' },
+    ],
+  },
+];
+
 const App = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,212 +223,11 @@ const App = () => {
   const totalItems = filteredProducts.length;
 
 
-  const collections = [
-    {
-      title: 'Works with Shopify POS',
-      description: 'The Works with Shopify POS feature enables you to streamline your workflow.',
-      appsCount: 104,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-green-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-purple-400 to-pink-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-red-500' },
-      ],
-    },
-    {
-      title: 'Useful apps for India',
-      description: 'The Useful apps for India feature enables you to streamline your workflow.',
-      appsCount: 18,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-blue-400 to-indigo-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-pink-400 to-orange-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-green-400 to-teal-500' },
-      ],
-    },
-    {
-      title: 'made-by-shopify',
-      description: 'The made-by-shopify feature enables you to streamline your workflow.',
-      appsCount: 17,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-purple-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-teal-400 to-green-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-orange-400 to-yellow-500' },
-      ],
-    },
-    {
-      title: 'Works with Shopify Marketing',
-      description: 'The Works with Shopify Marketing feature enables you to promote and streamline your products.',
-      appsCount: 7,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-indigo-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-pink-400 to-red-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-indigo-500' },
-      ],
-    },
-    {
-      title: 'Best POS Integrations',
-      description: 'Discover the best POS integrations to enhance your store operations.',
-      appsCount: 56,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-yellow-400 to-orange-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-blue-400 to-green-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-red-400 to-pink-500' },
-      ],
-    },
-    {
-      title: 'Shopify SEO Tools',
-      description: 'Improve your store’s visibility with these powerful SEO tools.',
-      appsCount: 34,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-teal-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-purple-400 to-yellow-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-orange-400 to-red-500' },
-      ],
-    },
-    {
-      title: 'Customer Retention',
-      description: 'Boost customer loyalty with these effective retention strategies.',
-      appsCount: 12,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-green-400 to-purple-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-blue-400 to-pink-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-indigo-500' },
-      ],
-    },
-    {
-      title: 'Shopify Analytics',
-      description: 'Get insights into your store’s performance with Shopify analytics tools.',
-      appsCount: 22,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-indigo-400 to-green-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-red-400 to-blue-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-purple-500' },
-      ],
-    },
-    {
-      title: 'Abandoned Cart Recovery',
-      description: 'Recover lost sales with abandoned cart recovery apps.',
-      appsCount: 9,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-teal-400 to-indigo-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-orange-400 to-pink-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-green-400 to-red-500' },
-      ],
-    },
-    {
-      title: 'Shopify Email Marketing',
-      description: 'Enhance your marketing strategy with Shopify email marketing apps.',
-      appsCount: 45,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-purple-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-yellow-400 to-pink-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-teal-400 to-indigo-500' },
-      ],
-    },
-    {
-      title: 'Payment Gateways',
-      description: 'Explore various payment gateway options for your Shopify store.',
-      appsCount: 67,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-orange-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-green-400 to-blue-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-pink-500' },
-      ],
-    },
-    {
-      title: 'Social Media Integrations',
-      description: 'Integrate social media platforms to boost your store’s engagement.',
-      appsCount: 33,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-blue-400 to-green-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-pink-400 to-yellow-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-indigo-400 to-red-500' },
-      ],
-    },
-    {
-      title: 'Shopify Plus Features',
-      description: 'Unlock advanced features with Shopify Plus.',
-      appsCount: 29,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-orange-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-green-400 to-red-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-yellow-500' },
-      ],
-    },
-    {
-      title: 'Store Design Apps',
-      description: 'Create a stunning storefront with these store design apps.',
-      appsCount: 21,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-teal-400 to-green-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-orange-400 to-purple-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-blue-500' },
-      ],
-    },
-    {
-      title: 'Shopify Multichannel',
-      description: 'Sell on multiple channels with Shopify multichannel integrations.',
-      appsCount: 14,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-purple-400 to-green-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-indigo-400 to-orange-500' },
-      ],
-    },
-    {
-      title: 'Dropshipping Apps',
-      description: 'Start your dropshipping business with these essential apps.',
-      appsCount: 78,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-blue-400 to-yellow-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-green-400 to-red-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-orange-400 to-purple-500' },
-      ],
-    },
-    {
-      title: 'Shopify Loyalty Programs',
-      description: 'Increase customer loyalty with Shopify loyalty program apps.',
-      appsCount: 8,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-pink-400 to-blue-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-yellow-400 to-green-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-purple-400 to-red-500' },
-      ],
-    },
-    {
-      title: 'Inventory Management',
-      description: 'Manage your inventory effectively with these Shopify apps.',
-      appsCount: 19,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-green-400 to-orange-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-blue-400 to-purple-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-yellow-400 to-pink-500' },
-      ],
-    },
-    {
-      title: 'Shipping Solutions',
-      description: 'Optimize your shipping process with Shopify shipping solutions.',
-      appsCount: 25,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-red-400 to-indigo-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-teal-400 to-orange-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r fromblue-400 to-yellow-500' },
-      ],
-    },
-    {
-      title: 'Shopify Conversion Tools',
-      description: 'Boost your sales with conversion rate optimization tools.',
-      appsCount: 37,
-      icons: [
-        { icon: <FaShopify />, bgColor: 'bg-gradient-to-r from-purple-400 to-teal-500' },
-        { icon: <FaChartLine />, bgColor: 'bg-gradient-to-r from-yellow-400 to-green-500' },
-        { icon: <FaMoneyCheckAlt />, bgColor: 'bg-gradient-to-r from-red-400 to-blue-500' },
-      ],
-    },
-  ];
+
 
   useEffect(() => {
     setFilteredProducts(collections)
-  }, [collections])
+  }, [])
 
   // Filter products based on search query
   const handleSearch = (query) => {
@@ -271,7 +273,7 @@ const App = () => {
           <small className='text-sm text-lightBlack'>
             We use an agile approach to test assumptions and connect with the needs of your audience early and often.
           </small>
-          <a href='#' className='text-blue-500 hover:underline  hidden md:inline'>See all</a>
+          <a href='https://www.shopdigest.com/' className='text-blue-500 hover:underline  hidden md:inline'>See all</a>
         </div>
         {
           filteredProducts.length === 0 ? (
